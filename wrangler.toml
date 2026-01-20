@@ -1,0 +1,10 @@
+{
+  "build": {
+    "command": "npm run build",
+    "cwd": "./",
+    "destination": "./dist"
+  },
+  "env": {
+    "VITE_CLERK_PUBLISHABLE_KEY": "@env VITE_CLERK_PUBLISHABLE_KEY"
+  }
+}

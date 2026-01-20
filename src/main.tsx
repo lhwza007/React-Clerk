@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { HashRouter, Routes, Route } from 'react-router'
 import { ClerkProvider } from '@clerk/react-router'
 import './index.css'
 import App from './App.tsx'
@@ -17,7 +17,7 @@ if (!PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -27,6 +27,6 @@ createRoot(document.getElementById('root')!).render(
           </Route>
         </Routes>
       </ClerkProvider>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
